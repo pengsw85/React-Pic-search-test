@@ -4,9 +4,10 @@ class SearchBar extends React.Component {
     state = { term: "" };
 
     onFormSubmit = e => {
+        // call a function passed by its parent - onSearchSubmit
         e.preventDefault();
-
-        this.props.onSubmit(this.state.term);
+        // access parent property with "this.props.property"
+        this.props.onSearchSubmit(this.state.term);
     };
 
     render() {
